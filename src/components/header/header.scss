@@ -1,0 +1,43 @@
+.header{
+  min-height: 1400px;
+  background: url('./img/header_bg.png') center center/100% no-repeat;
+  padding-top: 50px;
+
+  &__list, &__contacts {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  &__list {
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+  }
+
+  &__contacts {
+    position: relative;
+    justify-content: flex-start;
+  }
+}
+
+.phone__call {
+  color: #000;
+  margin-right: 17px;
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(./img/call.svg);
+    width: 20px;
+    height: 19px;
+    top: 24px;
+    left: -26px;
+  }
+}

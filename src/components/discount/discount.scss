@@ -1,0 +1,15 @@
+.discount {
+  min-height: 1500px;
+  background: url('./img/discount_background.png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.carts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin-bottom: 42px;
+  }
+}
