@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { DISCOUNT_DATA } from './discountData/discountData';
+import Cart from '../cart/Cart';
 import board from './img/board.png'
 import './discount.scss';
 
 export default function Discount() {
   return (
-    <div className="discount">
+    <section className="discount">
       <Container>
         <Row>
           <Col md={5}>
@@ -16,11 +18,18 @@ export default function Discount() {
               <div className="carts__title title">
                 Акции
               </div>
+              {
+                DISCOUNT_DATA.map(({title, text, url, transparent}, i) => (
+                  <div className="carts__cart"  key={i} >
+                    <Cart className="carts__cart" title={title} text={text} url={url} transparent={transparent}/>
+                  </div>
+                ))
+              }
             </div>
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   )
 
 }
